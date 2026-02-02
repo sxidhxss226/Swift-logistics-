@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swift Logistics Ltd - Tracking</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+body{line-height:1.6;color:#333;text-align:center;}
+nav{background:#0052cc;display:flex;justify-content:center;gap:20px;flex-wrap:wrap;padding:10px;}
+nav a{color:white;padding:10px 20px;border-radius:5px;transition:0.3s;}
+nav a:hover{background:#003d99;}
+section{padding:60px 20px;background:#ffffff;}
+h2{color:#0052cc;margin-bottom:20px;}
+.tracking-form{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:20px;}
+.tracking-form input{padding:10px;width:250px;border-radius:5px;border:1px solid #ccc;}
+.tracking-form button{padding:10px 20px;border:none;border-radius:5px;background:#0052cc;color:white;cursor:pointer;transition:0.3s;}
+.tracking-form button:hover{background:#003d99;}
+.tracking-result{font-weight:bold;color:#0052cc;}
+footer{text-align:center;padding:20px;background:#0052cc;color:white;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="tracking.html">Tracking</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+  <h2>Track Your Shipment</h2>
+  <div class="tracking-form">
+    <input type="text" id="trackingNumber" placeholder="Enter Tracking Number">
+    <button onclick="trackShipment()">Track</button>
+  </div>
+  <div id="trackingResult" class="tracking-result"></div>
+</section>
+
+<footer>
+  <p>© 2026 Swift Logistics Ltd. All rights reserved.</p>
+</footer>
+
+<script>
+function trackShipment(){
+  const trackingNumber=document.getElementById('trackingNumber').value;
+  const resultDiv=document.getElementById('trackingResult');
+  if(trackingNumber.trim()===""){ resultDiv.textContent="Please enter a tracking number."; return; }
+  resultDiv.textContent=`Shipment ${trackingNumber.toUpperCase()} is currently in transit and will arrive soon.`;
+}
+</script>
+
+</body>
+</html>
