@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swift Logistics Ltd - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+    body{line-height:1.6;color:#333;}
+    a{text-decoration:none;color:#0052cc;}
+    header, nav, section, footer{padding:20px;}
+    nav{background:#0052cc;display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+    nav a{color:white;padding:10px 20px;border-radius:5px;transition:0.3s;}
+    nav a:hover{background:#003d99;}
+    .hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;background:#f5f5f5;padding:50px 20px;}
+    .hero-content{max-width:500px;margin-right:20px;}
+    .hero-content h1{font-size:2.8rem;color:#0052cc;margin-bottom:15px;}
+    .hero-content p{font-size:1.2rem;margin-bottom:20px;}
+    .hero-content .btn{display:inline-block;background:#0052cc;color:white;padding:10px 25px;border-radius:5px;}
+    .hero-content .btn:hover{background:#003d99;}
+    .hero-image img{max-width:500px;border-radius:10px;animation:fadeIn 2s ease-in-out;}
+    .services{text-align:center;padding:60px 20px;background:#ffffff;}
+    .services h2{color:#0052cc;margin-bottom:40px;}
+    .service-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+    .card{background:#f5f5f5;padding:20px;width:250px;border-radius:10px;transition:transform 0.3s;}
+    .card:hover{transform:translateY(-10px);}
+    .card img{width:60px;margin-bottom:15px;}
+    footer{text-align:center;padding:20px;background:#0052cc;color:white;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    @media(max-width:900px){.hero{flex-direction:column;}.hero-content{margin-right:0;text-align:center;}.service-cards{flex-direction:column;align-items:center;}}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Fast. Reliable. Global.</h1>
+      <p>Your trusted logistics partner across the world.</p>
+      <a href="#services" class="btn">Our Services</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1611151731033-d8459b0546ec?auto=format&fit=crop&w=1200&q=80" alt="Delivery Trucks">
+    </div>
+  </header>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/0000FF/delivery.png" alt="Freight Delivery">
+        <h3>Freight Delivery</h3>
+        <p>Fast and secure transport of goods nationwide and internationally.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/0000FF/warehouse.png" alt="Warehousing">
+        <h3>Warehousing</h3>
+        <p>Modern storage solutions with real-time inventory tracking.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/0000FF/worldwide-location.png" alt="International Shipping">
+        <h3>International Shipping</h3>
+        <p>Seamless cross-border shipping with customs support.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Swift Logistics Ltd. All rights reserved.</p>
+  </footer>
+
+</body>
+    </html>
